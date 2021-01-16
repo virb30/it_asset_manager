@@ -13,11 +13,11 @@ Collects infos:
 
 # How to Develop
 
-Clone this repository
-Create virtual env
-Install dependencies
-Run tests
-Start coding
+- Clone this repository
+- Create virtual env
+- Install dependencies
+- Run tests
+- Start coding
 
 ```console
 git clone git@github.com:virb30/it_asset_manager.git it_asset_manager
