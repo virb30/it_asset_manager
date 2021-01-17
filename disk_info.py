@@ -1,4 +1,5 @@
 import psutil
+import humanfriendly
 
 
 def get_partition_info(path):
@@ -7,9 +8,9 @@ def get_partition_info(path):
 
     return {
         "path": path,
-        "total": disk_usage.total,
-        "used": disk_usage.used,
-        "free": disk_usage.free,
+        "total": humanfriendly.format_size(disk_usage.total, binary=True),
+        "used": humanfriendly.format_size(disk_usage.used, binary=True),
+        "free": humanfriendly.format_size(disk_usage.free, binary=True),
         "percent": disk_usage.percent,
     }
 
