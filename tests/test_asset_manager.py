@@ -11,7 +11,7 @@ class AssetManagerTest(TestCase):
 
     def test_asset_info_content(self):
         """Asset info must contain keys"""
-        expected = ["system_info", "cpu_info"]
+        expected = ["system_info", "cpu_info", "disk_info"]
 
         with self.subTest():
             for key in expected:
