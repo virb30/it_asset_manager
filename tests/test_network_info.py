@@ -11,7 +11,7 @@ class NetworkInfoTest(TestCase):
 
     def test_network_info_content(self):
         """Network info must be a list of dictionaries with expected keys"""
-        expected = ["nice_name", "mac", "ip", "ip6"]
+        expected = ["interface", "mac", "ip", "ip6"]
 
         self.assertIsInstance(self.content, list)
 
