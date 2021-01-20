@@ -18,10 +18,10 @@ def get_partition_info(path):
 def get_disk_info():
     partitions = psutil.disk_partitions()
 
-    disks = []
-
-    for partition in partitions:
-        if partition.opts != "cdrom":
-            disks.append(get_partition_info(partition.mountpoint))
+    disks = [
+        get_partition_info(partition.mountpoint)
+        for partition in partitions
+        if partition.opts != "cdrom"
+    ]
 
     return disks
