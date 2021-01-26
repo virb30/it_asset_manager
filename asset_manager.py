@@ -1,3 +1,4 @@
+from software_info import get_installed_apps
 from network_info import get_network_info
 from disk_info import get_disk_info
 from system_info import get_system_info
@@ -10,6 +11,7 @@ def get_asset_info():
         "cpu_info": get_cpu_info(),
         "disk_info": get_disk_info(),
         "network_info": get_network_info(),
+        "software_info": get_installed_apps(),
     }
 
     return asset_info
